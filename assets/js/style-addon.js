@@ -15,4 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const editYear = document.getElementById('edit-year')
     editYear.setAttribute('max', `${+new Date().getFullYear()}`)
+
+    const searchResultTable = document.getElementById('search-content-table')
+    searchResultTable.style.display = `none`
 })

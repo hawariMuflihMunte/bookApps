@@ -538,13 +538,19 @@ document.addEventListener(SEARCH_DATA, () => {
         const title = document.getElementById('search').value
         const data = searchBook(title)
         searchContent.innerHTML = ''
-        if (data !== undefined) searchContent.append(data)
-        else swal({
-            title: 'Failed',
-            text: 'Data is not found !',
-            icon: 'error',
-            button: 'OK'
-        })
+
+        if (data !== undefined) {
+            const searchResultTable = document.getElementById('search-content-table')
+            searchResultTable.style.display = `table`
+            searchContent.append(data)
+        } else {
+            swal({
+                title: 'Failed',
+                text: 'Data is not found !',
+                icon: 'error',
+                button: 'OK'
+            })
+        }
         document.getElementById('search').value = ''
     })
 })
