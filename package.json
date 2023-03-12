@@ -4,7 +4,7 @@
   "description": "Easify Book Listing",
   "main": "index.js",
   "scripts": {
-    "test": "jest --test-report",
+    "test": "jest",
     "live-server": "node liveServer.js",
     "lint": "eslint",
     "lint-fix": "eslint --fix",

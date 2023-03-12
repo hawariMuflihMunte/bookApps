@@ -3,6 +3,38 @@
     $color-2: #E9EDC9;
     $color-3: #FEFAE0;
     $color-4: #FAEDCD;
+
+    .bg-color-1 {
+        background-color: var($color-1);
+    }
+
+    .txt-color-1 {
+        color: var($color-1);
+    }
+
+    .bg-color-2 {
+        background-color: var($color-2);
+    }
+
+    .txt-color-2 {
+        color: var($color-2);
+    }
+
+    .bg-color-3 {
+        background-color: var($color-3);
+    }
+
+    .txt-color-3 {
+        color: var($color-3);
+    }
+
+    .bg-color-4 {
+        background-color: var($color-4);
+    }
+
+    .txt-color-4 {
+        color: var($color-4);
+    }
 }
 
 .dark-theme {
@@ -10,4 +42,36 @@
     $color-2: #790252;
     $color-3: #AF0171;
     $color-4: #E80F88;
+
+    .bg-color-1 {
+        background-color: var($color-1);
+    }
+
+    .txt-color-1 {
+        color: var($color-1);
+    }
+
+    .bg-color-2 {
+        background-color: var($color-2);
+    }
+
+    .txt-color-2 {
+        color: var($color-2);
+    }
+
+    .bg-color-3 {
+        background-color: var($color-3);
+    }
+
+    .txt-color-3 {
+        color: var($color-3);
+    }
+
+    .bg-color-4 {
+        background-color: var($color-4);
+    }
+
+    .txt-color-4 {
+        color: var($color-4);
+    }
 }

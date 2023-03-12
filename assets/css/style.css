@@ -10,48 +10,6 @@
 }
 /* End :root */
 
-/* Utils #1 */
-.bg-color-1 {
-    background-color: var(--color-1);
-}
-
-.txt-color-1 {
-    color: var(--color-1);
-}
-
-.bg-color-2 {
-    background-color: var(--color-2);
-}
-
-.txt-color-2 {
-    color: var(--color-2);
-}
-
-.bg-color-3 {
-    background-color: var(--color-3);
-}
-
-.txt-color-3 {
-    color: var(--color-3);
-}
-
-.bg-color-4 {
-    background-color: var(--color-4);
-}
-
-.txt-color-4 {
-    color: var(--color-4);
-}
-
-.bg-color-5 {
-    background-color: var(--color-5);
-}
-
-.txt-color-5 {
-    color: var(--color-5);
-}
-/* End Utils #1 */
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
