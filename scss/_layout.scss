@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
-::placeholder {
-    color: red;
+.container {
+    max-width: 80%;
+    margin: 0 auto;
 }
