@@ -1,3 +1,5 @@
+@use './_layout/positions';
+
 *,
 *::before,
 *::after {
@@ -10,7 +12,6 @@
 }
 
 // Styling for positioning
-@use './_layout/positions';
 
 // Styling for tables
 
