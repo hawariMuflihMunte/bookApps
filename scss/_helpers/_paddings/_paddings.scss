@@ -1,0 +1,71 @@
+/* Padding */
+
+/* Rules:
+ *
+ * Sizes:
+ *        => [empty] means all directions
+ * n      => none
+ * a      => auto
+ * xxs    => 3px
+ * xs     => 7px
+ * s      => 15px
+ * m      => 23px
+ * l      => 32px
+ * xl     => 42px
+ * xxl    => 60px
+ *
+ * # Usage:
+ * > padding-a
+ * > padding-xxl
+ *
+ * ---------------
+ *
+ * Delimiter:
+ * -    Positive
+ * ~ Negative value is not supported ! ~
+ *
+ * ---------------
+ *
+ * Direction:
+ * top          => top
+ * bottom       => bottom
+ * left         => left
+ * right        => right
+ * x-axis       => horizontal
+ * y-axis       => vertical
+ *
+ * # Usage:
+ * > padding-top
+ * > padding-y-axis
+ *
+ * # Note:
+ * Default sizing: xxs
+ *
+ * # Usage w sizing:
+ * > padding-bottom-xxl
+ * > padding-x-axis-m
+ *
+ *
+ */
+
+// Import styling for all directions
+@import './all';
+
+// Import styling for top direction only
+@import './top';
+
+// Import styling for bottom direction only
+@import './bottom';
+
+// Import styling for left direction only
+@import './left';
+
+// Import styling for right direction only
+@import './right';
+
+// Import styling for x-axis (horizontal) direction only
+@import './x';
+
+// Import styling for y-axis (vertical) direction only
+@import './y';
+

@@ -1,8 +1,12 @@
 @import '_colors';
 
+$input-border-color: #999;
+$input-text-color: #666;
+
 input {
-    border: 1px solid black;
+    border: 1px solid $input-border-color;
     border-radius: 0;
     outline: 0;
-    padding: 5px;
+    color: $input-text-color;
+    padding: 6px;
 }

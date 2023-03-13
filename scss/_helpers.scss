@@ -1,3 +1,7 @@
+@import './_helpers/_margins/margins';
+@import './_helpers/_paddings/paddings';
+
+// Font
 .font-extra-small {
     font-size: 10px;
 }
@@ -29,3 +33,19 @@
 .font-weight-thick {
     font-weight: 700;
 }
+// End Font
+
+// Buttons
+.button {
+    cursor: pointer;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding: 4px;
+}
+
+button.button {
+    border: 0;
+    outline: 0;
+}
+// End Buttons
