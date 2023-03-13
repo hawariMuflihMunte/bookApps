@@ -49,23 +49,23 @@
  */
 
 // Import styling for all directions
-@import './all';
+@use './all';
 
 // Import styling for top direction only
-@import './top';
+@use './top';
 
 // Import styling for bottom direction only
-@import './bottom';
+@use './bottom';
 
 // Import styling for left direction only
-@import './left';
+@use './left';
 
 // Import styling for right direction only
-@import './right';
+@use './right';
 
 // Import styling for x-axis (horizontal) direction only
-@import './x';
+@use './x';
 
 // Import styling for y-axis (vertical) direction only
-@import './y';
+@use './y';
 
