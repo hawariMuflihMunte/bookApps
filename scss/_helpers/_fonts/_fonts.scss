@@ -1,30 +1,42 @@
 // Font-Size
+$xxs: 0.5em;
+$xs: 0.75em;
+$s: 1.075em;
+$m: 1.4em;
+$l: 1.9em;
+$xl: 2.3em;
+$xxl: 3.0em;
+
+.font-lighter {
+    font-weight: lighter;
+}
+
 .font-xxs {
-    font-size: 0.5em;
+    font-size: $xxs;
 }
 
 .font-xs {
-    font-size: 0.75em;
+    font-size: $xs;
 }
 
 .font-s {
-    font-size: 1.075em;
+    font-size: $s;
 }
 
 .font-m {
-    font-size: 1.4em;
+    font-size: $m;
 }
 
 .font-l {
-    font-size: 1.9em;
+    font-size: $l;
 }
 
 .font-xl {
-    font-size: 2.3em;
+    font-size: $xl;
 }
 
 .font-xxl {
-    font-size: 3.0em;
+    font-size: $xxl;
 }
 // End Font-Size
 
@@ -63,5 +75,13 @@
 
 .font-900 {
     font-weight: 900;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-bolder {
+    font-weight: bolder;
 }
 // End Font-Weight

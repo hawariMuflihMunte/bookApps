@@ -1,6 +1,15 @@
-@use '_resetter';
-@use '_colors';
-@use '_layout';
-@use '_forms';
-@use '_helpers';
+@use './resetter';
+@use './colors';
+@use './layout';
+@use './forms';
+@use './helpers';
 
+@import './colors';
+
+body.light-theme {
+    @include theme($light-theme: true);
+
+    body.dark-theme {
+        @include theme($light-theme: false);
+    }
+}

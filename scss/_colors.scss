@@ -1,4 +1,4 @@
-.light-theme {
+%light-theme {
     $color-1: #CCD5AE;
     $color-2: #E9EDC9;
     $color-3: #FEFAE0;
@@ -37,7 +37,7 @@
     }
 }
 
-.dark-theme {
+%dark-theme {
     $color-1: #4C0033;
     $color-2: #790252;
     $color-3: #AF0171;
@@ -73,5 +73,15 @@
 
     .txt-color-4 {
         color: var($color-4);
+    }
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        @extend %light-theme;
+    }
+
+    @else {
+        @extend %dark-theme;
     }
 }

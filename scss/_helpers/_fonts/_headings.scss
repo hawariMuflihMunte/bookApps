@@ -1,23 +1,11 @@
-h1 {
-    font-size: 2.3em;
+$title-color: #222;
+$subtitle-color: #444;
+
+.title {
+    color: $title-color;
 }
 
-h2 {
-    font-size: 1.8em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-h4 {
-    font-size: 1.35em;
-}
-
-h5 {
-    font-size: 1.2em;
-}
-
-h6 {
-    font-size: 1.125em;
+.subtitle {
+    font-weight: lighter;
+    color: $subtitle-color;
 }
