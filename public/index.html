@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookApps | Easify Your Book List">
+    <meta name="author" content="Hawari Muflih Munte">
+
+    <title>BookApps | Easify Your Book List 📚 </title>
+
+    <!-- Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Quicksand Installation -->
+    <style>
+        html, body {
+            font-family: 'Quicksand', sans-serif !important;
+        }
+    </style>
+
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Material Symbols Config -->
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 300,
+          'GRAD' 200,
+          'opsz' 48
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BookApps" />
+    <meta property="og:type" content="book" />
+    <meta property="og:description" content="BookApps to easify your book listing" />
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:image" content="/apple-touch-icon.png" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./css/tailwind.output.css">
+
+    <script src="./js/index.js" type="module" defer></script>
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="dark:bg-slate-900 transition-all duration-500">
+    <header class="bg-slate-100 dark:bg-slate-700 transition-colors duration-500 py-4 px-10">
+        <div class="flex justify-between items-center">
+            <div class="flex flex-col">
+                <h1 class="text-3xl text-slate-800 dark:text-slate-300 dark:font-semibold">BookApps  📚 </h1>
+                <h3 class="text-lg text-slate-500 dark:text-slate-400 dark:font-semibold">Easify Your Book Listing</h3>
+            </div>
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    </header>
+    <div class="container mx-auto max-w-[98%] tablet:max-w-[80%] laptop:max-w-[75%] desktop:max-w-[70%] pt-14">
+        <main class="border border-slate-300 dark:border-slate-500 overflow-hidden rounded-sm">
+            <section class="p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Add Book 📚 </h2>
+                </header>
+                <div class="flex flex-col w-full desktop:w-4/6 desktop:mx-auto overflow-hidden rounded-sm">
+                    <div class="inline-flex">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Title</span>
+                        <input type="text" name="title" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book title. Ex: Cat of Misery, etc." />
+                    </div>
+                    <div class="inline-flex border-t border-slate-300">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Writer</span>
+                        <input type="text" name="writer" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book writer. Ex: Stephen King, J. K. Rowling, etc." />
+                    </div>
+                    <div class="inline-flex border-t border-slate-300">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Year</span>
+                        <input type="number" min="1900" name="year" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book year. Ex: 1999, 2008, and so on." />
+                    </div>
+                    <button type="submit" class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-500 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 font-bold py-2 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-b border-t border-slate-300 dark:border-hidden">
+                        <i class="material-symbols-outlined">
+                            bookmark_add
+                        </i>
+                    </button>
+                </div>
+            </section>
+            <section class="border-t border-t-slate-300 dark:border-t-slate-500 p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Unread 📖 </h2>
+                    <h4 class="text-base text-slate-500 dark:text-slate-400 desktop:text-center">List of books that you haven't read or now reading</h4>
+                </header>
+                <div class="content flex flex-nowrap overflow-x-auto scroll-smooth">
+                    <div class="content-item">
+                        <div class="bg-slate-100 dark:bg-slate-300 rounded-lg p-4 shadow-lg overflow-hidden flex flex-col">
+                            <div class="content-item-header mb-2">
+                                <h4 class="text-2xl text-slate-600 text-center">TITLE</h4>
+                                <p class="text-base text-slate-500 text-center">WRITER</p>
+                                <p class="text-sm text-slate-500 text-center">YEAR</p>
+                            </div>
+                            <div class="inline-flex">
+                                <button class="bg-amber-500 hover:bg-amber-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-amber-600 dark:hover:text-amber-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-l">
+                                    <i class="material-symbols-outlined">edit_note</i>
+                                </button>
+                                <button class="bg-green-500 hover:bg-green-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-green-600 dark:hover:text-green-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150">
+                                    <i class="material-symbols-outlined">check</i>
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-red-600 dark:hover:text-red-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-r">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="border-t border-t-slate-300 dark:border-t-slate-500 p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Read 📕 </h2>
+                    <h4 class="text-base text-slate-500 dark:text-slate-400 desktop:text-center">List of books that you have read</h4>
+                </header>
+                <div class="content flex flex-nowrap overflow-x-auto scroll-smooth">
+                    <div class="content-item">
+                        <div class="bg-slate-100 dark:bg-slate-300 rounded-lg p-4 shadow-lg overflow-hidden flex flex-col">
+                            <div class="content-item-header mb-2">
+                                <h4 class="text-2xl text-slate-600 text-center">TITLE</h4>
+                                <p class="text-base text-slate-500 text-center">WRITER</p>
+                                <p class="text-sm text-slate-500 text-center">YEAR</p>
+                            </div>
+                            <div class="inline-flex">
+                                <button class="bg-amber-500 hover:bg-amber-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-amber-600 dark:hover:text-amber-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-l">
+                                    <i class="material-symbols-outlined">edit_note</i>
+                                </button>
+                                <button class="bg-blue-500 hover:bg-blue-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-slate-200 dark:text-blue-600 dark:hover:text-blue-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150">
+                                    <i class="material-symbols-outlined">close</i>
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-red-600 dark:hover:text-red-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-r">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-10"></footer>
+    </div>
+</body>
+</html>
