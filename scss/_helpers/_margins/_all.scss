@@ -1,3 +1,5 @@
+@import './variables';
+
 .margin-a {
     margin: auto;
 }
@@ -7,58 +9,58 @@
 }
 
 .margin-xxs {
-    margin: 3px;
+    margin: $xxs;
 }
 
 .margin-xs {
-    margin: 7px;
+    margin: $xs;
 }
 
 .margin-s {
-    margin: 15px;
+    margin: $s;
 }
 
 .margin-m {
-    margin: 23px;
+    margin: $m;
 }
 
 .margin-l {
-    margin: 32px;
+    margin: $l;
 }
 
 .margin-xl {
-    margin: 42px;
+    margin: $xl;
 }
 
 .margin-xxl {
-    margin: 60px;
+    margin: $xxl;
 }
 
 // Minus modifier ( -- )
 .margin--xxs {
-    margin: -3px;
+    margin: -($xxs);
 }
 
 .margin--xs {
-    margin: -7px;
+    margin: -($xs);
 }
 
 .margin--s {
-    margin: -15px;
+    margin: -($s);
 }
 
 .margin--m {
-    margin: -23px;
+    margin: -($m);
 }
 
 .margin--l {
-    margin: -32px;
+    margin: -($l);
 }
 
 .margin--xl {
-    margin: -42px;
+    margin: -($xl);
 }
 
 .margin--xxl {
-    margin: -60px;
+    margin: -($xxl);
 }

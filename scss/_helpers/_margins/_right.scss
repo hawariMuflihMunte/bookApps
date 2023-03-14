@@ -1,3 +1,5 @@
+@import './variables';
+
 .margin-right-a {
     margin-right: auto;
 }
@@ -7,58 +9,58 @@
 }
 
 .margin-right-xxs {
-    margin-right: 3px;
+    margin-right: $xxs;
 }
 
 .margin-right-xs {
-    margin-right: 7px;
+    margin-right: $xs;
 }
 
 .margin-right-s {
-    margin-right: 15px;
+    margin-right: $s;
 }
 
 .margin-right-m {
-    margin-right: 23px;
+    margin-right: $m;
 }
 
 .margin-right-l {
-    margin-right: 32px;
+    margin-right: $l;
 }
 
 .margin-right-xl {
-    margin-right: 42px;
+    margin-right: $xl;
 }
 
 .margin-right-xxl {
-    margin-right: 60px;
+    margin-right: $xxl;
 }
 
 // Minus modifier ( -- )
 .margin-right--xxs {
-    margin-right: -3px;
+    margin-right: -($xxs);
 }
 
 .margin-right--xs {
-    margin-right: -7px;
+    margin-right: -($xs);
 }
 
 .margin-right--s {
-    margin-right: -15px;
+    margin-right: -($s);
 }
 
 .margin-right--m {
-    margin-right: -23px;
+    margin-right: -($m);
 }
 
 .margin-right--l {
-    margin-right: -32px;
+    margin-right: -($l);
 }
 
 .margin-right--xl {
-    margin-right: -42px;
+    margin-right: -($xl);
 }
 
 .margin-right--xxl {
-    margin-right: -60px;
+    margin-right: -($xxl);
 }

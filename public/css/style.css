@@ -134,6 +134,50 @@ table {
   position: unset;
 }
 
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table-responsive > table {
+  border-collapse: collapse;
+  border-radius: 0px;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+table > thead {
+  background-color: #F8F8F8;
+  color: #333;
+}
+
+table > thead > tr > th:not(:first-child) {
+  padding: 4px 2px;
+}
+
+table > tbody > tr {
+  transition: all 250ms linear;
+}
+
+table > tbody > tr:nth-child(even) {
+  background-color: var(--color-3);
+}
+
+table > tbody > tr:hover {
+  background-color: var(--color-4);
+}
+
+table > tbody > tr > td {
+  text-align: center;
+  padding: 12px 18px;
+}
+
+table > tbody > tr > td:nth-child(1),
+table > tbody > tr > td:nth-child(2) {
+  white-space: normal;
+  max-width: 180px;
+}
+
 *,
 *::before,
 *::after {
@@ -1011,36 +1055,92 @@ input {
  *
  *
  */
-.font-extra-small {
-  font-size: 10px;
+h1 {
+  font-size: 2.3em;
 }
 
-.font-small {
-  font-size: 12px;
+h2 {
+  font-size: 1.8em;
 }
 
-.font-medium {
-  font-size: 14px;
+h3 {
+  font-size: 1.5em;
 }
 
-.font-large {
-  font-size: 18px;
+h4 {
+  font-size: 1.35em;
 }
 
-.font-extra-large {
-  font-size: 25px;
+h5 {
+  font-size: 1.2em;
 }
 
-.font-weight-thin {
+h6 {
+  font-size: 1.125em;
+}
+
+.font-xxs {
+  font-size: 0.5em;
+}
+
+.font-xs {
+  font-size: 0.75em;
+}
+
+.font-s {
+  font-size: 1.075em;
+}
+
+.font-m {
+  font-size: 1.4em;
+}
+
+.font-l {
+  font-size: 1.9em;
+}
+
+.font-xl {
+  font-size: 2.3em;
+}
+
+.font-xxl {
+  font-size: 3em;
+}
+
+.font-100 {
+  font-weight: 100;
+}
+
+.font-200 {
+  font-weight: 200;
+}
+
+.font-300 {
   font-weight: 300;
 }
 
-.font-weight-medium {
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
   font-weight: 500;
 }
 
-.font-weight-thick {
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
   font-weight: 700;
+}
+
+.font-800 {
+  font-weight: 800;
+}
+
+.font-900 {
+  font-weight: 900;
 }
 
 .button {

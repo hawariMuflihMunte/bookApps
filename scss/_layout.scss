@@ -1,4 +1,5 @@
 @use './_layout/positions';
+@use './_layout/tables';
 
 *,
 *::before,
@@ -10,10 +11,6 @@
     max-width: 80%;
     margin: 0 auto;
 }
-
-// Styling for positioning
-
-// Styling for tables
 
 nav.navbar {
     display: flex;

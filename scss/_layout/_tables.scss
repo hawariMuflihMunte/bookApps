@@ -1,0 +1,47 @@
+$table-head-bg: #F8F8F8;
+$table-head-txt: #333;
+$table-radius: 0px;
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-responsive > table {
+    border-collapse: collapse;
+    border-radius: $table-radius;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+table > thead {
+    background-color: $table-head-bg;
+    color: $table-head-txt;
+}
+
+table > thead > tr > th:not(:first-child) {
+    padding: 4px 2px;
+}
+
+table > tbody > tr {
+    transition: all 250ms linear;
+}
+
+table > tbody > tr:nth-child(even) {
+    background-color: var(--color-3);
+}
+
+table > tbody > tr:hover {
+    background-color: var(--color-4);
+}
+
+table > tbody > tr > td {
+    text-align: center;
+    padding: 12px 18px;
+}
+
+table > tbody > tr > td:nth-child(1),
+table > tbody > tr > td:nth-child(2) {
+    white-space: normal;
+    max-width: 180px;
+}
