@@ -62,8 +62,8 @@
         }
     </script>
 </head>
-<body class="dark:bg-slate-900">
-    <header class="bg-slate-100 dark:bg-slate-700 py-4 px-10">
+<body class="dark:bg-slate-900 transition-all duration-500">
+    <header class="bg-slate-100 dark:bg-slate-700 transition-colors duration-500 py-4 px-10">
         <div class="flex justify-between items-center">
             <div class="flex flex-col">
                 <h1 class="text-3xl text-slate-800 dark:text-slate-300 dark:font-semibold">BookApps  📚 </h1>
@@ -75,19 +75,90 @@
             </button>
         </div>
     </header>
-    <div class="container mx-auto max-w-[98%] tablet:max-w-[80%] laptop:max-w-[75%] desktop:max-w-[70%] pt-5">
-        <main class="flex">
-            <section class="border-1 border-slate-600 dark:border-slate-400 p-4">
-                <h2 class="text-2xl dark:text-slate-300">Unread Books</h2>
-                <h4 class="text-base text-slate-500 dark:text-slate-400">List of books that you haven't read</h4>
+    <div class="container mx-auto max-w-[98%] tablet:max-w-[80%] laptop:max-w-[75%] desktop:max-w-[70%] pt-14">
+        <main class="border border-slate-300 dark:border-slate-500 overflow-hidden rounded-sm">
+            <section class="p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Add Book 📚 </h2>
+                </header>
+                <div class="flex flex-col w-full desktop:w-4/6 desktop:mx-auto overflow-hidden rounded-sm">
+                    <div class="inline-flex">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Title</span>
+                        <input type="text" name="title" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book title. Ex: Cat of Misery, etc." />
+                    </div>
+                    <div class="inline-flex border-t border-slate-300">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Writer</span>
+                        <input type="text" name="writer" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book writer. Ex: Stephen King, J. K. Rowling, etc." />
+                    </div>
+                    <div class="inline-flex border-t border-slate-300">
+                        <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Year</span>
+                        <input type="number" min="1900" name="year" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book year. Ex: 1999, 2008, and so on." />
+                    </div>
+                    <button type="submit" class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-500 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 font-bold py-2 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-b border-t border-slate-300 dark:border-hidden">
+                        <i class="material-symbols-outlined">
+                            bookmark_add
+                        </i>
+                    </button>
+                </div>
             </section>
-            <section>
-
+            <section class="border-t border-t-slate-300 dark:border-t-slate-500 p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Unread 📖 </h2>
+                    <h4 class="text-base text-slate-500 dark:text-slate-400 desktop:text-center">List of books that you haven't read or now reading</h4>
+                </header>
+                <div class="content flex flex-nowrap overflow-x-auto scroll-smooth">
+                    <div class="content-item">
+                        <div class="bg-slate-100 dark:bg-slate-300 rounded-lg p-4 shadow-lg overflow-hidden flex flex-col">
+                            <div class="content-item-header mb-2">
+                                <h4 class="text-2xl text-slate-600 text-center">TITLE</h4>
+                                <p class="text-base text-slate-500 text-center">WRITER</p>
+                                <p class="text-sm text-slate-500 text-center">YEAR</p>
+                            </div>
+                            <div class="inline-flex">
+                                <button class="bg-amber-500 hover:bg-amber-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-amber-600 dark:hover:text-amber-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-l">
+                                    <i class="material-symbols-outlined">edit_note</i>
+                                </button>
+                                <button class="bg-green-500 hover:bg-green-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-green-600 dark:hover:text-green-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150">
+                                    <i class="material-symbols-outlined">check</i>
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-red-600 dark:hover:text-red-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-r">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="border-t border-t-slate-300 dark:border-t-slate-500 p-6">
+                <header class="mb-6">
+                    <h2 class="text-2xl dark:text-slate-300 desktop:text-center">Read 📕 </h2>
+                    <h4 class="text-base text-slate-500 dark:text-slate-400 desktop:text-center">List of books that you have read</h4>
+                </header>
+                <div class="content flex flex-nowrap overflow-x-auto scroll-smooth">
+                    <div class="content-item">
+                        <div class="bg-slate-100 dark:bg-slate-300 rounded-lg p-4 shadow-lg overflow-hidden flex flex-col">
+                            <div class="content-item-header mb-2">
+                                <h4 class="text-2xl text-slate-600 text-center">TITLE</h4>
+                                <p class="text-base text-slate-500 text-center">WRITER</p>
+                                <p class="text-sm text-slate-500 text-center">YEAR</p>
+                            </div>
+                            <div class="inline-flex">
+                                <button class="bg-amber-500 hover:bg-amber-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-amber-600 dark:hover:text-amber-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-l">
+                                    <i class="material-symbols-outlined">edit_note</i>
+                                </button>
+                                <button class="bg-blue-500 hover:bg-blue-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-slate-200 dark:text-blue-600 dark:hover:text-blue-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150">
+                                    <i class="material-symbols-outlined">close</i>
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-red-600 dark:hover:text-red-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-r">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
-        <footer>
-    
-        </footer>
+        <footer class="mt-10"></footer>
     </div>
 </body>
 </html>
