@@ -52,169 +52,42 @@
     <link rel="stylesheet" href="./css/tailwind.output.css">
 
     <script src="./js/index.js" type="module" defer></script>
-</head>
-<body class="light-theme">
-    <nav class="navbar">
 
-    </nav>
-    <div class="container bg-color-1">
-        <header>
-            <h1 class="title font-l bg-color-1 txt-color-4">BookApps 📚</h1>
-            <h2 class="subtitle font-s margin-top-xs margin-bottom-s">Easify Your Book Listing</h2>
-        </header>
-        <main>
-            
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="dark:bg-slate-900">
+    <header class="bg-slate-100 dark:bg-slate-700 py-4 px-10">
+        <div class="flex justify-between items-center">
+            <div class="flex flex-col">
+                <h1 class="text-3xl text-slate-800 dark:text-slate-300 dark:font-semibold">BookApps  📚 </h1>
+                <h3 class="text-lg text-slate-500 dark:text-slate-400 dark:font-semibold">Easify Your Book Listing</h3>
+            </div>
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    </header>
+    <div class="container mx-auto max-w-[98%] tablet:max-w-[80%] laptop:max-w-[75%] desktop:max-w-[70%] pt-5">
+        <main class="flex">
+            <section class="border-1 border-slate-600 dark:border-slate-400 p-4">
+                <h2 class="text-2xl dark:text-slate-300">Unread Books</h2>
+                <h4 class="text-base text-slate-500 dark:text-slate-400">List of books that you haven't read</h4>
+            </section>
+            <section>
+
+            </section>
         </main>
         <footer>
     
         </footer>
-    </div>
-    <nav class="nav-fixed">
-        <div class="container flex-row flex-between flex-middle">
-            <a href="./index.html" class="font-extra-large">BookApps</a>
-            <ul class="nav-ul">
-                <li>
-                    <span class="hint--bottom hint--rounded" aria-label="Add data">
-                        <button id="add-data" class="bttn-unite bttn-md bttn-warning font-extra-large">
-                            <i class="bi-window-plus"></i>
-                        </button>
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container has-nav-fixed-margin">
-        <div class="mgt-3"></div>
-        <h1 class="font-weight-medium">Book Data</h1>
-        <hr>
-        <div class="searchbox full-width">
-            <form action="" method="post" id="search-form">
-                <input type="search" name="search" id="search" placeholder="Search book by title...." required>
-                <span id="input-addon" class="flex-row flex-middle flex-center txt-color-1">Click to search book... <i class="bi-hand-index-thumb"></i></span>
-                <button type="submit" class="bttn-unite bttn-md bttn-danger">
-                    <i class="bi-search"></i>
-                </button>
-            </form>
-        </div>
-        <div class="table-responsive" style="padding-bottom: 20px;">
-            <table id="search-content-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Writer</th>
-                        <th>Year</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="search-content">
-                    <!-- Data is generated using JavaScript client-side -->
-                </tbody>
-            </table>
-            <hr>
-        </div>
-        <div bp="grid" class="mgt-3">
-            <div bp="12@sm 6@md" class="overflow-x-auto">
-                <h3 class="font-weight-medium text-center mgb-2">Unread Book <i class="bi-bookmark-x-fill"></i></h3>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <!-- <th>no</th> -->
-                                <th>Title</th>
-                                <th>Writer</th>
-                                <th>Year</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="unread-book-container">
-                            <!-- Data is generated using JavaScript client-side -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div bp="12@sm 6@md" class="overflow-x-auto mgt-3-sm">
-                <h3 class="font-weight-medium text-center mgb-2">Read Book <i class="bi-bookmark-check-fill"></i></h3>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <!-- <th>no</th> -->
-                                <th>Title</th>
-                                <th>Writer</th>
-                                <th>Year</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="read-book-container">
-                            <!-- Data is generated using JavaScript client-side -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="add-data-form">
-        <div class="back-button">
-            <button type="button" class="back"><i class="bi-arrow-bar-right"></i></button>
-        </div>
-        <div class="container full-width full-height flex-row flex-center flex-middle">
-            <div class="form-wrapper mgt-child-2">
-                <h3 class="font-weight-medium text-center">Add Data</h3>
-                <form action="" method="post" class="mgt-3" id="add">
-                    <div class="form-input">
-                        <label for="name">Book Title</label>
-                        <input type="text" name="name" id="name" required tabindex="1">
-                    </div>
-                    <div class="form-input">
-                        <label for="writer">Book Writer</label>
-                        <input type="text" name="writer" id="writer" required tabindex="2">
-                    </div>
-                    <div class="form-input">
-                        <label for="year">Year</label>
-                        <input type="number" name="year" id="year" min="1950" required tabindex="3">
-                    </div>
-                    <div class="form-input">
-                        <div class="pretty p-icon p-smooth">
-                            <input type="checkbox" name="isread" id="isread">
-                            <div class="state p-success">
-                                <i class="icon bi-check"></i>
-                                <label>I have read this book</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-input">
-                        <button type="submit" class="bttn-unite bttn-success" style="border-radius: 6px;">Add</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div id="edit-data-form">
-        <div class="back-button">
-            <button type="button" class="back"><i class="bi-arrow-bar-right"></i></button>
-        </div>
-        <div class="container full-width full-height flex-row flex-center flex-middle">
-            <div class="form-wrapper mgt-child-2">
-                <h3 class="font-weight-medium text-center">Edit Data</h3>
-                <form action="" method="post" class="mgt-3" id="edit">
-                    <div class="form-input">
-                        <label for="edit-name">Book Title</label>
-                        <input type="text" name="edit-name" id="edit-name" required>
-                    </div>
-                    <div class="form-input">
-                        <label for="edit-writer">Book Writer</label>
-                        <input type="text" name="edit-writer" id="edit-writer" required>
-                    </div>
-                    <div class="form-input">
-                        <label for="edit-year">Year</label>
-                        <input type="number" name="edit-year" id="edit-year" min="1950" required>
-                    </div>
-                    <div class="form-input">
-                        <button type="submit" class="bttn-unite bttn-warning" style="border-radius: 6px;">Confirm</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 </body>
 </html>

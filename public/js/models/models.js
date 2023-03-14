@@ -1,4 +1,4 @@
-class BookStorageManagement {
+class ModelsClass {
   constructor () {
     if (!this.checkAvailability()) {
       console.error('Your web browser do not support web storage system. Try using different web browser to get the latest features with this app')
@@ -33,6 +33,6 @@ class BookStorageManagement {
   }
 }
 
-const bookStorage = new BookStorageManagement()
+const Models = new ModelsClass()
 
-export default bookStorage
+export default Models
