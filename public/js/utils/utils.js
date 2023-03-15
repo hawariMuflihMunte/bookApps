@@ -1,6 +1,6 @@
 class Utils {
   static _id () {
-    return Number(`${+new Date().getFullYear()}${+new Date().getMinutes().toPrecision()}${+new Date().getMilliseconds()}${Math.round(Math.random() * 99999999) + 1}`)
+    return Number(`${Math.floor(Math.random() + 1 * 10)}${+new Date().getFullYear()}${+new Date().getMinutes().toPrecision()}${+new Date().getMilliseconds()}${Math.round(Math.random() * 99999999) + 1}`)
   }
 
   static _emptyArray (_array) {
@@ -9,7 +9,7 @@ class Utils {
     return false
   }
 
-  static _book (
+  static _bookCreate (
     id,
     title,
     writer,

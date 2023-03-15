@@ -27,7 +27,7 @@ function main () {
   const cardData = [
     {
       id: Utils._id(),
-      title: 'Hawari',
+      title: 'Hawari Muflih Munte',
       writer: 'Muflih Munte',
       year: 20,
       isRead: false
@@ -45,6 +45,27 @@ function main () {
       writer: 'Muflih #3',
       year: 30,
       isRead: false
+    },
+    {
+      id: Utils._id(),
+      title: 'Hawari Muflih Munte',
+      writer: 'Muflih Munte',
+      year: 20,
+      isRead: true
+    },
+    {
+      id: Utils._id(),
+      title: 'Hawari #2',
+      writer: 'Muflih #2',
+      year: 25,
+      isRead: true
+    },
+    {
+      id: Utils._id(),
+      title: 'Hawari #3',
+      writer: 'Muflih #3',
+      year: 30,
+      isRead: true
     }
   ]
 
