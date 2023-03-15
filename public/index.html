@@ -53,14 +53,6 @@
 
     <script src="./js/index.js" type="module" defer></script>
 
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
 </head>
 <body class="dark:bg-slate-900 transition-all duration-500">
     <header class="bg-slate-100 dark:bg-slate-700 transition-colors duration-500 py-4 px-10">
@@ -94,6 +86,12 @@
                         <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Year</span>
                         <input type="number" min="1900" name="year" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book year. Ex: 1999, 2008, and so on." />
                     </div>
+                    <div class="inline-flex border-t border-slate-300 bg-slate-300">
+                        <span class="flex place-content-center place-items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">
+                            <input type="checkbox" name="isRead" class="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        </span>
+                        <label for="isRead" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200 text-slate-600">I have read this book</label>
+                    </div>
                     <button type="submit" class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-500 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 font-bold py-2 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-b border-t border-slate-300 dark:border-hidden">
                         <i class="material-symbols-outlined">
                             bookmark_add
@@ -107,26 +105,7 @@
                     <h4 class="text-base text-slate-500 dark:text-slate-400 desktop:text-center">List of books that you haven't read or now reading</h4>
                 </header>
                 <div class="content flex flex-nowrap overflow-x-auto scroll-smooth">
-                    <div class="content-item">
-                        <div class="bg-slate-100 dark:bg-slate-300 rounded-lg p-4 shadow-lg overflow-hidden flex flex-col">
-                            <div class="content-item-header mb-2">
-                                <h4 class="text-2xl text-slate-600 text-center">TITLE</h4>
-                                <p class="text-base text-slate-500 text-center">WRITER</p>
-                                <p class="text-sm text-slate-500 text-center">YEAR</p>
-                            </div>
-                            <div class="inline-flex">
-                                <button class="bg-amber-500 hover:bg-amber-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-amber-600 dark:hover:text-amber-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-l">
-                                    <i class="material-symbols-outlined">edit_note</i>
-                                </button>
-                                <button class="bg-green-500 hover:bg-green-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-green-600 dark:hover:text-green-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150">
-                                    <i class="material-symbols-outlined">check</i>
-                                </button>
-                                <button class="bg-red-500 hover:bg-red-600 dark:bg-slate-200 dark:hover:bg-slate-300 text-gray-800 dark:text-red-600 dark:hover:text-red-800 font-bold py-1 px-2 flex place-content-center place-items-center transition-all duration-150 rounded-r">
-                                    <i class="material-symbols-outlined">delete</i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
             <section class="border-t border-t-slate-300 dark:border-t-slate-500 p-6">
@@ -158,7 +137,7 @@
                 </div>
             </section>
         </main>
-        <footer class="mt-10"></footer>
+        <footer class="mt-20"></footer>
     </div>
 </body>
 </html>
