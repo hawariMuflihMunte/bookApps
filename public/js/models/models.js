@@ -31,6 +31,10 @@ class ModelsClass {
 
     return data
   }
+
+  createData (object) {
+    return object
+  }
 }
 
 const Models = new ModelsClass()

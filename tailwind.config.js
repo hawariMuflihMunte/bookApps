@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-const autoprefixer = require('autoprefixer')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./public/**/**/*.{html,js}'],
@@ -14,9 +11,5 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
   ]
 }

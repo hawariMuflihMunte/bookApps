@@ -1,5 +1,3 @@
-import swal from 'sweetalert'
-
 const books = []
 const searchContent = []
 const RENDER_PROG = 'RENDER_PROG'
