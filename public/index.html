@@ -74,19 +74,19 @@
                     <form action="" method="post" id="add-data" class="flex flex-col w-full desktop:w-4/6 desktop:mx-auto overflow-hidden rounded-sm">
                         <div class="inline-flex">
                             <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Title</span>
-                            <input type="text" name="title" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book title. Ex: Cat of Misery, etc." />
+                            <input type="text" name="title" id="titleForm" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert title. Ex: Cat of Misery, etc." />
                         </div>
                         <div class="inline-flex border-t border-slate-300">
                             <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Writer</span>
-                            <input type="text" name="writer" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book writer. Ex: Stephen King, J. K. Rowling, etc." />
+                            <input type="text" name="writer" id="writerForm" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert writer. Ex: Stephen King, J. K. Rowling, etc." />
                         </div>
                         <div class="inline-flex border-t border-slate-300">
                             <span class="flex items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">Year</span>
-                            <input type="number" min="1900" name="year" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert book year. Ex: 1999, 2008, and so on." />
+                            <input type="number" min="1900" name="year" id="yearForm" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200" placeholder="Insert year. Ex: 1999, 2008, and so on." />
                         </div>
                         <div class="inline-flex border-t border-slate-300 bg-slate-300">
                             <span class="flex place-content-center place-items-center p-2 bg-slate-100 text-slate-600 border-r border-slate-300 w-20">
-                                <input type="checkbox" name="isRead" class="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <input type="checkbox" name="isRead" id="isReadForm" class="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             </span>
                             <label for="isRead" class="bg-slate-100 px-3 py-2 shadow-sm placeholder-slate-400 focus:outline-none block w-full sm:text-sm focus:bg-slate-200 hover:bg-slate-200 text-slate-600">I have read this book</label>
                         </div>

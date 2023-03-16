@@ -1,5 +1,31 @@
-class Views {
-  static card (data) {
+import Data from '../data/data.js'
+
+class Views_ {
+  constructor () {
+    this.render()
+  }
+
+  render () {
+    const containerUnread = document.querySelector('.container-unread')
+    const containerRead = document.querySelector('.container-read')
+
+    // Empty content first
+    containerUnread.innerHTML = ''
+    containerRead.innerHTML = ''
+
+    for (const _card_ of Data) {
+      const card = this.card(_card_)
+      console.log(_card_)
+
+      if (!_card_.isRead) {
+        containerUnread.appendChild(card)
+      } else {
+        containerRead.appendChild(card)
+      }
+    }
+  }
+
+  card (data) {
     const {
       id,
       title,
@@ -61,5 +87,7 @@ class Views {
     return cardElement
   }
 }
+
+const Views = new Views_()
 
 export default Views
