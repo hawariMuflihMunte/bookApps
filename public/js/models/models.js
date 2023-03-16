@@ -1,3 +1,4 @@
+import Utils from '../utils/utils.js'
 import Data from '../data/data.js'
 
 class Models_ {
@@ -6,6 +7,10 @@ class Models_ {
       console.error('Your web browser do not support web storage system. Try using different web browser to get the latest features with this app')
       return false
     }
+
+    const DATA_KEY = +new Date()
+
+    this.key = DATA_KEY
   }
 
   #checkAvailability () {
@@ -15,14 +20,14 @@ class Models_ {
     return true
   }
 
-  saveBook (key, object) {
-    const data = JSON.stringify(object)
+  saveBook () {
+    const data = JSON.stringify(Data)
 
-    localStorage.setItem(key, data)
+    localStorage.setItem(this.key, data)
   }
 
-  loadBook (key) {
-    const dataJson = localStorage.getItem(key)
+  loadBook () {
+    const dataJson = localStorage.getItem(this.key)
     const data = JSON.parse(dataJson)
 
     return data

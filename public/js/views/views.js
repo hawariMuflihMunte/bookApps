@@ -15,7 +15,6 @@ class Views_ {
 
     for (const _card_ of Data) {
       const card = this.card(_card_)
-      console.log(_card_)
 
       if (!_card_.isRead) {
         containerUnread.appendChild(card)

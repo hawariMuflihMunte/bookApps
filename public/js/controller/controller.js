@@ -29,6 +29,26 @@ class Controller_ {
     const year = document.getElementById('yearForm').value
     const isRead = document.getElementById('isReadForm').checked
 
+    // Check for duplication
+    for (const book of Data) {
+      if (
+        book.title === title &&
+            book.writer === writer &&
+            book.year === year
+      ) {
+        // eslint-disable-next-line no-undef
+        swal({
+          title: 'Warning!',
+          text: 'The same data exists. Please input different data',
+          icon: 'warning'
+        })
+
+        console.error('No data')
+
+        return false
+      }
+    }
+
     if (
       title === '' &&
         writer === '' &&
@@ -95,6 +115,7 @@ class Controller_ {
     )
 
     Data.push(data)
+    Models.saveBook()
     Views.render()
   }
 }

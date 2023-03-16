@@ -12,9 +12,6 @@ function main () {
    */
   Theme()
 
-  // eslint-disable-next-line no-unused-vars
-  const DATA_KEY = +new Date()
-
   // App logic
 }
 
