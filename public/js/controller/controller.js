@@ -73,8 +73,6 @@ class Controller_ {
         icon: 'warning'
       })
 
-      console.error('No title')
-
       return false
     }
 
@@ -86,8 +84,6 @@ class Controller_ {
         icon: 'warning'
       })
 
-      console.error('No Writer')
-
       return false
     }
 
@@ -98,8 +94,6 @@ class Controller_ {
         text: 'No year was inputted. Please input data first',
         icon: 'warning'
       })
-
-      console.error('No Year')
 
       return false
     }

@@ -1,4 +1,5 @@
 import Data from '../data/data.js'
+import Utils from '../utils/utils.js'
 
 class Views_ {
   constructor () {
@@ -9,18 +10,23 @@ class Views_ {
     const containerUnread = document.querySelector('.container-unread')
     const containerRead = document.querySelector('.container-read')
 
-    // Empty content first
     containerUnread.innerHTML = ''
     containerRead.innerHTML = ''
 
-    for (const _card_ of Data) {
-      const card = this.card(_card_)
+    if (!Utils._emptyArray(Data)) {
+      for (const _card_ of Data[0]) {
+        const card = this.card(_card_)
+        console.log(_card_)
 
-      if (!_card_.isRead) {
-        containerUnread.appendChild(card)
-      } else {
-        containerRead.appendChild(card)
+        if (!_card_.isRead) {
+          containerUnread.appendChild(card)
+        } else {
+          containerRead.appendChild(card)
+        }
       }
+    } else {
+      containerUnread.innerHTML = '<div class="p-4 text-slate-600 dark:text-slate-400">## No Data ##</div'
+      containerRead.innerHTML = '<div class="p-4 text-slate-600 dark:text-slate-400">## No Data ##</div'
     }
   }
 

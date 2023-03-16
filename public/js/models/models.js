@@ -1,4 +1,5 @@
 import Data from '../data/data.js'
+import Views from '../views/views.js'
 import DATA_KEY from './key.js'
 
 class Models_ {
@@ -10,6 +11,8 @@ class Models_ {
 
     const key = DATA_KEY
     this.key = key
+
+    Views.render()
   }
 
   #checkAvailability () {
@@ -27,7 +30,8 @@ class Models_ {
 
   loadBook () {
     const data = localStorage.getItem(this.key)
-    return JSON.parse(data)
+
+    Data.push(JSON.parse(data))
   }
 }
 

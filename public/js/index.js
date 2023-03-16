@@ -1,4 +1,6 @@
 import Theme from './theme/theme.js'
+
+import Models from './models/models.js'
 import Views from './views/views.js'
 // eslint-disable-next-line no-unused-vars
 import Controller from './controller/controller.js'
@@ -14,6 +16,7 @@ function main () {
   Theme()
 
   // App logic
+  Models.loadBook()
   Views.render()
 }
 
