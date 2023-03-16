@@ -1,16 +1,15 @@
-import Utils from '../utils/utils.js'
 import Data from '../data/data.js'
+import DATA_KEY from './key.js'
 
 class Models_ {
   constructor () {
     if (!this.#checkAvailability()) {
-      console.error('Your web browser do not support web storage system. Try using different web browser to get the latest features with this app')
+      console.log('Your web browser do not support web storage system. Try using different web browser to get the latest features with this app')
       return false
     }
 
-    const DATA_KEY = +new Date()
-
-    this.key = DATA_KEY
+    const key = DATA_KEY
+    this.key = key
   }
 
   #checkAvailability () {
@@ -27,10 +26,8 @@ class Models_ {
   }
 
   loadBook () {
-    const dataJson = localStorage.getItem(this.key)
-    const data = JSON.parse(dataJson)
-
-    return data
+    const data = localStorage.getItem(this.key)
+    return JSON.parse(data)
   }
 }
 

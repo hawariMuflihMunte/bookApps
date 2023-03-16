@@ -1,6 +1,5 @@
 import Data from '../data/data.js'
 import Utils from '../utils/utils.js'
-
 import Models from '../models/models.js'
 import Views from '../views/views.js'
 

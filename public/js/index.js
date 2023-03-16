@@ -1,5 +1,6 @@
 import Theme from './theme/theme.js'
 import Views from './views/views.js'
+// eslint-disable-next-line no-unused-vars
 import Controller from './controller/controller.js'
 
 /*
@@ -13,6 +14,7 @@ function main () {
   Theme()
 
   // App logic
+  Views.render()
 }
 
 main()

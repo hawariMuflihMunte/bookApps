@@ -5,7 +5,7 @@ class Utils {
 
   static _emptyArray (_array) {
     if (!Array.isArray(_array)) return false
-    if (_array.length === 0) return false
+    if (_array.length === 0) return true
     return false
   }
 
