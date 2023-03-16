@@ -1,11 +1,9 @@
-class ModelsClass {
+class Models_ {
   constructor () {
     if (!this.checkAvailability()) {
       console.error('Your web browser do not support web storage system. Try using different web browser to get the latest features with this app')
       return false
     }
-
-    this._data = []
   }
 
   checkAvailability () {
@@ -31,12 +29,8 @@ class ModelsClass {
 
     return data
   }
-
-  createData (object) {
-    return object
-  }
 }
 
-const Models = new ModelsClass()
+const Models = new Models_()
 
 export default Models
